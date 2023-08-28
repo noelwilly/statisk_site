@@ -106,6 +106,10 @@ dd {
   flex-direction: column;
 }
 
+.soldOut {
+  opacity: 0.5;
+}
+
 /** DESKTOP **/
 @media (min-width: 750px) {
 }
