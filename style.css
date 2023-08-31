@@ -5,8 +5,15 @@
   box-sizing: border-box;
 }
 
-button {
+.købBoks button {
   max-width: 10rem;
+  display: flex;
+  padding: 10px;
+  background-color: green;
+  border: black;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
 }
 
 body {
@@ -25,10 +32,26 @@ header {
   padding: 1rem 2rem;
 }
 
+h4 {
+  color: dimgrey;
+}
+
 ul {
   display: flex;
   list-style: none;
   gap: 1.2rem;
+}
+
+.heroheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: coral;
+  font-size: 16rem;
+}
+
+.heroheader span {
+  color: blue;
 }
 
 h1 {
@@ -49,16 +72,24 @@ img {
   height: auto;
 }
 
-.kategorier {
+.kategorier ol {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-}
-
-.kategorier a {
-  background-color: chocolate;
   color: white;
   padding: 1rem;
+  list-style: none;
+  text-decoration: none;
+}
+
+.brandList {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
 }
 
 .produktside {
@@ -74,25 +105,15 @@ img {
   width: 100%;
 }
 
-.womenstop {
+.købBoks {
   display: grid;
   grid-column: 2;
-}
-
-.køb {
-  display: grid;
-  grid-column: 2;
-  background-color: lightgrey;
+  border: lightgrey 1px solid;
+  border-radius: 2%;
+  box-shadow: 0.5px 0.5px;
   padding: 1rem;
   max-width: fit-content;
-}
-
-dt {
-  font-weight: bold;
-}
-
-dd {
-  padding: 0.6rem;
+  gap: 1rem;
 }
 
 .produktliste {
@@ -102,12 +123,32 @@ dd {
 }
 
 .produktliste article {
-  display: flex;
-  flex-direction: column;
+  border: 3px solid orange;
+}
+
+.prodBoks {
+  display: grid;
+  gap: 1rem;
 }
 
 .soldOut {
   opacity: 0.5;
+}
+
+.produktliste article.soldOut::before {
+  content: "Udsolgt";
+  position: absolute;
+  background: red;
+  padding: 1rem;
+}
+
+.disCount {
+  display: none;
+}
+
+.disCounted {
+  display: block;
+  color: red;
 }
 
 /** DESKTOP **/
